@@ -1,0 +1,34 @@
+{
+  "name": "coconat/coconat-php",
+  "description": "CoreMedia Content Access Tool",
+  "homepage": "https://github.com/mgoellnitz/coconat",
+  "support": {
+    "issues": "https://github.com/mgoellnitz/coconat/issues",
+    "source": "https://github.com/mgoellnitz/coconat"
+  },
+  "license": "LGPL-3.0",
+  "keywords": [
+    "content"
+  ],
+  "require": {
+    "php": ">=5.3",
+    "phpunit/phpunit": ">=4.5.0",
+    "lf4php/lf4php": ">=4.2.0",
+    "lf4php/lf4php-log4php": ">=2.0.0"
+  },
+  "require-dev": {
+    "phing/phing": "2.*"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "test/"
+    ]
+  },
+  "suggest": {
+  }
+}
