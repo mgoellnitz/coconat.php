@@ -1,5 +1,7 @@
 ![CoConAT](http://coconat.divshot.io/coconat-small.png)
 
+[![Dependency Status](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242/badge.svg?style=flat)](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242)
+
 # CoConAT PHP flavour
 
 This is the PHP flavour of the [CoConAT Content Access Tool](http://coconat.divshot.io/).  

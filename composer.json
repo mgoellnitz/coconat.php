@@ -1,10 +1,10 @@
 {
   "name": "coconat/coconat-php",
-  "description": "CoreMedia Content Access Tool",
-  "homepage": "https://github.com/mgoellnitz/coconat",
+  "description": "CoConAT Content Access Tool",
+  "homepage": "http://coconat.divshot.io/",
   "support": {
-    "issues": "https://github.com/mgoellnitz/coconat/issues",
-    "source": "https://github.com/mgoellnitz/coconat"
+    "issues": "https://github.com/mgoellnitz/coconat.php/issues",
+    "source": "https://github.com/mgoellnitz/coconat.php"
   },
   "license": "LGPL-3.0",
   "keywords": [
