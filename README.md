@@ -22,7 +22,7 @@ composer update
 The test run can be started via
 
 ```
-php
+phpunit --bootstrap vendor/autoload.php test
 ```
 
 ## Usage example
