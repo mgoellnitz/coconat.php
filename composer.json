@@ -1,22 +1,30 @@
 {
-  "name": "coconat/coconat-php",
+  "name": "coconat/coconat.php",
   "description": "CoConAT Content Access Tool",
   "homepage": "http://coconat.divshot.io/",
   "support": {
     "issues": "https://github.com/mgoellnitz/coconat.php/issues",
     "source": "https://github.com/mgoellnitz/coconat.php"
   },
+  "authors": [
+    {
+      "name": "Martin Goellnitz",
+      "email": "martin@provocon.eu",
+      "homepage": "http://mgoellnitz.github.io/",
+      "role": "Developer"
+    }
+  ],
   "license": "LGPL-3.0",
   "keywords": [
     "content"
   ],
   "require": {
     "php": ">=5.3",
-    "phpunit/phpunit": ">=4.5.0",
     "lf4php/lf4php": ">=4.2.0",
     "lf4php/lf4php-log4php": ">=2.0.0"
   },
   "require-dev": {
+    "phpunit/phpunit": ">=4.5.0",
     "phing/phing": "2.*"
   },
   "autoload": {
