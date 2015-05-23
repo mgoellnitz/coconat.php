@@ -1,3 +1,13 @@
 language: php
 
-script: composer update ; phpunit --bootstrap vendor/autoload.php --coverage-text test
+install:
+  - composer require satooshi/php-coveralls:~0.6@stable
+ 
+before_script:
+  - mkdir -p build/logs
+ 
+script: 
+  - composer update ; phpunit --bootstrap vendor/autoload.php --coverage-text  --coverage-clover build/logs/clover.xml test
+
+after_success:
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php vendor/bin/coveralls -v; fi;'
