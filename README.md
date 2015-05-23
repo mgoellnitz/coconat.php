@@ -2,6 +2,7 @@
 
 [![Dependency Status](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242/badge.svg?style=flat)](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242)
 [![Build Status](https://travis-ci.org/mgoellnitz/coconat.php.svg?branch=master)](https://travis-ci.org/mgoellnitz/coconat.php)
+[![Coverage Status](https://coveralls.io/repos/mgoellnitz/coconat.php/badge.svg?branch=master)](https://coveralls.io/r/mgoellnitz/coconat.php?branch=master)
 
 # CoConAT PHP flavour
 
