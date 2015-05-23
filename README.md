@@ -13,6 +13,8 @@ direct access of a Content Server database (CMS, MLS, or RLS) in a structured wa
 It is a direct rewrite of portions of the Java flavour to use PHP standard means 
 for database access.
 
+CoConAT PHP ist available through [Packagist](https://packagist.org/packages/coconat/coconat-php).
+
 ## Building
 
 Prerequisites are composer and phpunit.
