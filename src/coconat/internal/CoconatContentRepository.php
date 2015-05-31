@@ -88,20 +88,21 @@ class CoconatContentRepository implements Repository {
         }
 
         // select link lists
+        $this->log->debug("getProperties() selecting link lists");
         $linkLists = array();
         try {
-          $linkquery = "SELECT * FROM LinkLists WHERE sourcedocument = $id AND sourceversion = $version ORDER BY propertyname ASC, linkindex ASC";
+          $linkquery = "SELECT * FROM LinkLists WHERE sourcedocument = $id AND sourceversion = $version ORDER BY propertyName ASC, linkIndex ASC";
           $linkstatement = $this->dbConnection->query($linkquery);
-          $ids = null;
           while ($row = $linkstatement->fetch()) {
             $propertyName = $row['propertyName'];
             $targetid = $row['targetDocument'];
             $linkIndex = $row['linkIndex'];
-            if ($ids == null) {
-              $ids = array();
-              $linkLists[$propertyName] = $ids;
+            $this->log->debug("getProperties() linklist {} -> {}", array($propertyName, $targetid));
+            if (!array_key_exists($propertyName, $linkLists)) {
+              $linkLists[$propertyName] = array();
             }
-            $ids[$linkIndex] = $targetid;
+            $linkLists[$propertyName][$linkIndex] = $targetid;
+            $this->log->debug("getProperties() linklist {} = {}", array($propertyName, $linkLists[$propertyName]));
           }
         } catch (PDOException $e) {
           $this->log->error("getProperties() (linklists) id {}: {}", array($id, $e->getMessage()));
@@ -123,7 +124,7 @@ class CoconatContentRepository implements Repository {
         $blobIds = array();
         $propertyNames = array();
         try {
-          $blobidquery = "SELECT * FROM Blobs WHERE documentid = $id AND documentversion = $version ORDER BY propertyname ASC";
+          $blobidquery = "SELECT * FROM Blobs WHERE documentid = $id AND documentversion = $version ORDER BY propertyName ASC";
           $blobstatement = $this->dbConnection->query($blobidquery);
           while ($row = $blobstatement->fetch()) {
             $propertyName = $row['propertyName'];
@@ -155,7 +156,7 @@ class CoconatContentRepository implements Repository {
         }
 
         // select xml
-        $xmlquery = "SELECT * FROM Texts WHERE documentid = $id AND documentversion = $version ORDER BY propertyname ASC";
+        $xmlquery = "SELECT * FROM Texts WHERE documentid = $id AND documentversion = $version ORDER BY propertyName ASC";
         $xmlstatement = $this->dbConnection->query($xmlquery);
         while ($xmlrow = $xmlstatement->fetch()) {
           $propertyName = $xmlrow['propertyName'];
@@ -193,6 +194,7 @@ class CoconatContentRepository implements Repository {
       $query = "SELECT * FROM Resources WHERE folderid_ = $parentId AND name_ = '$name'";
       $statement = $this->dbConnection->query($query);
       while ($row = $statement->fetch()) {
+        print_r(array_keys($row));
         $id = $row['id_'];
         $this->log->info("getChildIdFromParentId() {}/{}: {}", array($parentId, $name, $id));
       }

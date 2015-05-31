@@ -21,6 +21,7 @@
 
 namespace coconat\internal\test;
 
+use lf4php\LoggerFactory;
 use coconat\internal\CoconatContentRepository;
 use PHPUnit_Framework_TestCase;
 
@@ -34,36 +35,31 @@ class CoconatRepositoryTest extends PHPUnit_Framework_TestCase {
 
   public function testRepository() {
     printf(getcwd());
-    $dbconnector = 'sqlite:unittest.sqlite3';
+    $dbconnector = 'sqlite:test/unittest.sqlite3';
     $repository = new CoconatContentRepository($dbconnector, '', '');
 
     $home = $repository->getChild("CoConAT/Home");
     $this->assertNotNull($home);
     $this->assertNotNull($home, "root topic 'Home' not found");
     $this->assertFalse($home->isEmpty(), "root topic must not have an empty property set");
-    $this->assertEquals($home->entrySet() . size(), 16, "Unexpected number of properties for root topic");
-    $this->assertEquals($home->get("title"), "CoConAT", "Unexpected title found");
-    $this->assertEquals($home->get("teaser"), "<div xmlns=\"http://www.coremedia.com/2003/richtext-1.0\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><p>CoreMedia Content Access Tool. A far too simple library to access basic CoreMedia CMS content objects directly from the database using different languages for integration purposes.</p></div>", "Unexpected teaser found");
-    $this->assertTrue($home->containsKey("keywords"), "root topic should contain property keywords");
-    $this->assertTrue($home->containsValue("CoConAT"), "root topic should property value CoConAT in some property");
-    $l = $home->get("logo");
-    $this->assertNotNull($l, "no logo found in root topic");
-    $logos = $l;
-    $this->assertEquals($logos->size(), 1, "Expected to find exactly one logo");
-    $logo = $logos->get(0);
-    $this->assertEquals($logo->keySet() . size(), logo . values() . size(), "Size of keys must match size of values for logo");
-    $this->assertEquals($logo->size(), 17, "Unexpected number of properties for logo");
-    $this->assertEquals($logo->get("width"), "200", "Unexpected width in logo");
-    $this->assertEquals($logo->get("height"), "94", "Unexpected height in logo");
-    $this->assertEquals($logo->getId(), "10", "Unexpected id for logo");
-    $this->assertEquals("" + $logo, "10 :ImageData", "Unexpected string representation for logo");
-    $b = $logo->get("data");
-    $this->assertNotNull(b, "no blob found in logo object");
-    $blob = $b;
-    $this->assertEquals($blob->getLen(), 10657, "Unexpected number of bytes in blob");
-    $this->assertEquals($blob->getMimeType(), "image/png", "Unexpected mime type in blob");
-    $this->assertEquals($blob->getContentId(), "10", "Unexpected content id reference in blob");
-    $this->assertEquals($blob->getPropertyName(), "data", "Unexpected property name reference in blob");
+    $this->assertEquals(29, count($home->entries()), "Unexpected number of properties for root topic");
+    $this->assertEquals("CoConAT", $home->get("title"), "Unexpected title found");
+    $this->assertEquals("<div xmlns=\"http://www.coremedia.com/2003/richtext-1.0\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><p>CoreMedia Content Access Tool. A far too simple library to access basic CoreMedia CMS content objects directly from the database using different languages for integration purposes.</p></div>", $home->get("teaser"), "Unexpected teaser found");
+    $this->assertTrue($home->hasProperty("keywords"), "root topic should contain property keywords");
+    $logos = $home->get("logo");
+    $this->assertNotNull($logos, "no logo list found in root topic");
+    $this->assertEquals(1, count($logos), "Expected to find exactly one logo");
+    $logo = $logos[0];
+    $this->assertEquals(33, $logo->size(), "Unexpected number of properties for logo");
+    $this->assertEquals("200", $logo->get("width"), "Unexpected width in logo");
+    $this->assertEquals("94", $logo->get("height"), "Unexpected height in logo");
+    $this->assertEquals("10", $logo->getId(), "Unexpected id for logo");
+    $blob = $logo->get("data");
+    $this->assertNotNull($blob, "no blob found in logo object");
+    $this->assertEquals(10657, $blob->getLen(), "Unexpected number of bytes in blob");
+    $this->assertEquals("image/png", $blob->getMimeType(), "Unexpected mime type in blob");
+    $this->assertEquals("10", $blob->getContentId(), "Unexpected content id reference in blob");
+    $this->assertEquals("data", $blob->getPropertyName(), "Unexpected property name reference in blob");
     $s = $home->get("subTopics");
     $this->assertNotNull($s, "no subtopics found in root topic");
   }
