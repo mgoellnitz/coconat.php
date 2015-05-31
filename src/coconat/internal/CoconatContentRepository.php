@@ -203,7 +203,7 @@ class CoconatContentRepository implements Repository {
   }
 
   private function getChildId($path) {
-    $arcs = split("/", $path);
+    $arcs = explode("/", $path);
     $currentFolder = "1"; // root
     foreach ($arcs as $folder) {
       $this->log->info("getChildId() lookup {} in {}", array($folder, $currentFolder));
