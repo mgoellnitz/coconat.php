@@ -102,7 +102,6 @@ class CoconatContentRepository implements Repository {
               $linkLists[$propertyName] = array();
             }
             $linkLists[$propertyName][$linkIndex] = $targetid;
-            $this->log->debug("getProperties() linklist {} = {}", array($propertyName, $linkLists[$propertyName]));
           }
         } catch (PDOException $e) {
           $this->log->error("getProperties() (linklists) id {}: {}", array($id, $e->getMessage()));
