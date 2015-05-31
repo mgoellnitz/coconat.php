@@ -36,7 +36,7 @@ phpunit --bootstrap vendor/autoload.php test
 This unittest uses an sqlite3 database which can be create from the source with
 
 ```
-sqlite3 test/unittest.sqlite < test/unittest.sql
+sqlite3 test/unittest.sqlite3 < test/unittest.sql
 ```
 
 ## Usage example
