@@ -33,10 +33,16 @@ The test run can be started via
 phpunit --bootstrap vendor/autoload.php test
 ```
 
+This unittest uses an sqlite3 database which can be create from the source with
+
+```
+sqlite3 test/unittest.sqlite < test/unittest.sql
+```
+
 ## Usage example
 
-A ReadContent.php example is included which relies on the same MySQL menusite database
-to exist as its Java counter part.
+A ReadContent.php example is included in the example directory which relies on 
+the same MySQL menusite database to exist as its Java counter part.
 
 ## To Do
 
