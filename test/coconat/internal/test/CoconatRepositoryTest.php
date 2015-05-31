@@ -34,7 +34,6 @@ use PHPUnit_Framework_TestCase;
 class CoconatRepositoryTest extends PHPUnit_Framework_TestCase {
 
   public function testRepository() {
-    printf(getcwd());
     $dbconnector = 'sqlite:test/unittest.sqlite3';
     $repository = new CoconatContentRepository($dbconnector, '', '');
 
