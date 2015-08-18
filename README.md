@@ -10,11 +10,11 @@
 
 # CoConAT PHP flavour
 
-This is the PHP flavour of the [CoConAT Content Access Tool](http://coconat.divshot.io/).  
-It is a small library to access the contents of a CoreMedia content repository through 
+This is the PHP flavour of the [CoConAT Content Access Tool](http://coconat.divshot.io/).
+It is a small library to access the contents of a CoreMedia content repository through
 direct access of a Content Server database (CMS, MLS, or RLS) in a structured way.
 
-It is a direct rewrite of portions of the Java flavour to use PHP standard means 
+It is a direct rewrite of portions of the Java flavour to use PHP standard means
 for database access.
 
 CoConAT PHP ist available through [Packagist](https://packagist.org/packages/coconat/coconat-php).
@@ -41,10 +41,5 @@ sqlite3 test/unittest.sqlite3 < test/unittest.sql
 
 ## Usage example
 
-A ReadContent.php example is included in the example directory which relies on 
+A ReadContent.php example is included in the example directory which relies on
 the same MySQL menusite database to exist as its Java counter part.
-
-## To Do
-
-Add a decent unit test coverage like with the Java flavour. Get independent of
-MySQL database example or provide a PHP like way to delivery it or create it.
