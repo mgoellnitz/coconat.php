@@ -1,4 +1,4 @@
-![CoConAT](http://coconat.divshot.io/coconat-small.png)
+![CoConAT](https://raw.githubusercontent.com/mgoellnitz/coconat/master/coconat-small.png)
 
 [![Dependency Status](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242/badge.svg?style=flat)](https://www.versioneye.com/user/projects/554fbbfff7db0d2f07000242)
 [![Build Status](https://travis-ci.org/mgoellnitz/coconat.php.svg?branch=master)](https://travis-ci.org/mgoellnitz/coconat.php)
