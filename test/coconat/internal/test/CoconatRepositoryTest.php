@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright 2015 Martin Goellnitz
+ * Copyright 2015-2016 Martin Goellnitz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -52,6 +52,7 @@ class CoconatRepositoryTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals("200", $logo->get("width"), "Unexpected width in logo");
     $this->assertEquals("94", $logo->get("height"), "Unexpected height in logo");
     $this->assertEquals("10", $logo->getId(), "Unexpected id for logo");
+    $this->assertEquals("9", $repository.getParentIdForChildId($logo->getId()), "Unexpected parent id for logo");
     $blob = $logo->get("data");
     $this->assertNotNull($blob, "no blob found in logo object");
     $this->assertEquals(10657, $blob->getLen(), "Unexpected number of bytes in blob");

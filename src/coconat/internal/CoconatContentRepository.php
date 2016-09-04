@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright 2015 Martin Goellnitz
+ * Copyright 2015-2016 Martin Goellnitz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -199,6 +199,22 @@ class CoconatContentRepository implements Repository {
       }
     } catch (PDOException $e) {
       $this->log->error("getChildIdFromParentId() {} {}: {}", array($name, $parentId, $e->getMessage()));
+    }
+    return $id;
+  }
+
+  private function getParentIdFromChildId($childId) {
+    $id = null;
+    try {
+      $query = "SELECT * FROM Resources WHERE id_ = $childId";
+      $statement = $this->dbConnection->query($query);
+      while ($row = $statement->fetch()) {
+        print_r(array_keys($row));
+        $id = $row['folderid_'];
+        $this->log->info("getParentIdFromChildId() {}: {}", array($childId, $id));
+      }
+    } catch (PDOException $e) {
+      $this->log->error("getParentIdFromChildId() {}: {}", array($childId, $e->getMessage()));
     }
     return $id;
   }
