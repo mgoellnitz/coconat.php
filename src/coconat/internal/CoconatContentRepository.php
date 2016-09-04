@@ -203,7 +203,7 @@ class CoconatContentRepository implements Repository {
     return $id;
   }
 
-  private function getParentIdFromChildId($childId) {
+  public function getParentIdFromChildId($childId) {
     $id = null;
     try {
       $query = "SELECT * FROM Resources WHERE id_ = $childId";
