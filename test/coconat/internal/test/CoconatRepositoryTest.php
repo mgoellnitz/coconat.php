@@ -52,7 +52,7 @@ class CoconatRepositoryTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals("200", $logo->get("width"), "Unexpected width in logo");
     $this->assertEquals("94", $logo->get("height"), "Unexpected height in logo");
     $this->assertEquals("10", $logo->getId(), "Unexpected id for logo");
-    $this->assertEquals("9", $repository.getParentIdFromChildId($logo->getId()), "Unexpected parent id for logo");
+    $this->assertEquals("9", $repository->getParentIdFromChildId($logo->getId()), "Unexpected parent id for logo");
     $blob = $logo->get("data");
     $this->assertNotNull($blob, "no blob found in logo object");
     $this->assertEquals(10657, $blob->getLen(), "Unexpected number of bytes in blob");
