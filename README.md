@@ -10,7 +10,7 @@
 
 # CoConAT PHP flavour
 
-This is the PHP flavour of the [CoConAT Content Access Tool](http://coconat.divshot.io/).
+This is the PHP flavour of the [CoConAT Content Access Tool](http://mgoellnitz.github.io/coconat/).
 It is a small library to access the contents of a CoreMedia content repository through
 direct access of a Content Server database (CMS, MLS, or RLS) in a structured way.
 
@@ -43,3 +43,8 @@ sqlite3 test/unittest.sqlite3 < test/unittest.sql
 
 A ReadContent.php example is included in the example directory which relies on
 the same MySQL menusite database to exist as its Java counter part.
+
+## Issue Reporting
+
+Pleas use the issue (reporting facility at github](https://github.com/mgoellnitz/coconat.php/issues) 
+to get in touch.
