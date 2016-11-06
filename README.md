@@ -46,5 +46,5 @@ the same MySQL menusite database to exist as its Java counter part.
 
 ## Issue Reporting
 
-Pleas use the issue (reporting facility at github](https://github.com/mgoellnitz/coconat.php/issues) 
+Please use the [issue reporting facility at github](https://github.com/mgoellnitz/coconat.php/issues) 
 to get in touch.
