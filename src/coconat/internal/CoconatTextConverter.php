@@ -137,7 +137,7 @@ class CoconatTextConverter {
     } // if
     $this->dataPosition += 4;
 
-    $buffersize;
+    $buffersize = 0;
     if ($length > 0) {
       if ($length <= (strlen($this->text) - $this->textPosition)) {
         $buffersize = $length;
