@@ -8,7 +8,7 @@ php:
   - hhvm
   
 install:
-  - composer require satooshi/php-coveralls:~2.1.0@stable
+  - composer require php-coveralls/php-coveralls:~2.1.0@stable
  
 before_script:
   - mkdir -p build/logs
