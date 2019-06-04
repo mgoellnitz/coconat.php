@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/mgoellnitz/coconat.php.svg?branch=master)](https://travis-ci.org/mgoellnitz/coconat.php)
 [![Coverage Status](https://coveralls.io/repos/github/mgoellnitz/coconat.php/badge.svg?branch=master)](https://coveralls.io/github/mgoellnitz/coconat.php?branch=master)
 [![License](https://poser.pugx.org/coconat/coconat.php/license)](https://packagist.org/packages/coconat/coconat.php)
-
 [![Latest Unstable Version](https://poser.pugx.org/coconat/coconat.php/v/unstable)](https://packagist.org/packages/coconat/coconat.php)
 [![Latest Stable Version](https://poser.pugx.org/coconat/coconat.php/version)](https://packagist.org/packages/coconat/coconat.php)
 
