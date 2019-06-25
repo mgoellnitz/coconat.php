@@ -1,5 +1,6 @@
 ![CoConAT](https://raw.githubusercontent.com/mgoellnitz/coconat/master/template/coconat-small.png)
 
+[![Latest Release](https://img.shields.io/github/release/mgoellnitz/coconat.php.svg)](https://github.com/mgoellnitz/coconat.php/releases/latest)
 [![Build Status](https://travis-ci.org/mgoellnitz/coconat.php.svg?branch=master)](https://travis-ci.org/mgoellnitz/coconat.php)
 [![Coverage Status](https://coveralls.io/repos/github/mgoellnitz/coconat.php/badge.svg?branch=master)](https://coveralls.io/github/mgoellnitz/coconat.php?branch=master)
 [![License](https://poser.pugx.org/coconat/coconat.php/license)](https://packagist.org/packages/coconat/coconat.php)
