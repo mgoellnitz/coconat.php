@@ -18,12 +18,12 @@
     "content"
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.2",
     "lf4php/lf4php": ">=4.2.0",
     "lf4php/lf4php-log4php": ">=2.1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": ">=5.1.3",
+    "phpunit/phpunit": ">=6.5.5",
     "phing/phing": "2.*"
   },
   "autoload": {
