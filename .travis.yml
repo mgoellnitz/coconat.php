@@ -6,6 +6,7 @@ php:
   
 install:
   - composer require php-coveralls/php-coveralls:~2.1.0@stable
+  - ls vendor
  
 before_script:
   - mkdir -p build/logs
