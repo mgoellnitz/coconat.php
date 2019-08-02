@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright 2015 Martin Goellnitz
+ * Copyright 2015-2019 Martin Goellnitz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -22,14 +22,14 @@
 namespace coconat\internal\test;
 
 use coconat\internal\CoconatTextConverter;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Small test of the text converter.
  *
  * Using a simple text and data segment to obtain the compound result.
  */
-class CoconatTextConverterTest extends PHPUnit_Framework_TestCase {
+class CoconatTextConverterTest extends TestCase {
 
   public function testConverter() {
     $text = "Enjoy the taste of a duck cutlet combined with caramelized onions. A dream!";
