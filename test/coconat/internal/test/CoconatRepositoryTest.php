@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright 2015-2016 Martin Goellnitz
+ * Copyright 2015-2019 Martin Goellnitz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -23,7 +23,7 @@ namespace coconat\internal\test;
 
 use lf4php\LoggerFactory;
 use coconat\internal\CoconatContentRepository;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Small test of repository access.
@@ -31,7 +31,7 @@ use PHPUnit_Framework_TestCase;
  * This test uses a sqlite database not supported by the original system.
  * It is derived from the hsqldb used in the Java flavour ov this library.
  */
-class CoconatRepositoryTest extends PHPUnit_Framework_TestCase {
+class CoconatRepositoryTest extends TestCase {
 
   public function testRepository() {
     $repository = new CoconatContentRepository('sqlite:test/unittest.sqlite3', '', '');
