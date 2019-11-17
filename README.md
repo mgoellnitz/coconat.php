@@ -18,6 +18,13 @@ for database access.
 
 CoConAT PHP ist available through [Packagist](https://packagist.org/packages/coconat/coconat-php).
 
+
+## Feedback
+
+Please use the [issue reporting facility at github](https://github.com/mgoellnitz/coconat.php/issues) 
+to get in touch.
+
+
 ## Building
 
 Prerequisites are composer and phpunit.
@@ -38,12 +45,8 @@ This unittest uses an sqlite3 database which can be create from the source with
 sqlite3 test/unittest.sqlite3 < test/unittest.sql
 ```
 
+
 ## Usage example
 
 A ReadContent.php example is included in the example directory which relies on
 the same MySQL menusite database to exist as its Java counter part.
-
-## Issue Reporting
-
-Please use the [issue reporting facility at github](https://github.com/mgoellnitz/coconat.php/issues) 
-to get in touch.
